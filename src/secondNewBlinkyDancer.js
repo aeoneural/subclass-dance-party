@@ -1,4 +1,4 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var secondNewBlinkyDancer = function(top, left, timeBetweenSteps) {
    
   makeDancer.call(this, top, left, timeBetweenSteps);
   
@@ -8,11 +8,11 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 };
 
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+secondNewBlinkyDancer.prototype = Object.create(makeDancer.prototype);
 
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+secondNewBlinkyDancer.prototype.constructor = secondNewBlinkyDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+secondNewBlinkyDancer.prototype.step = function() {
   var context = this;
   // call the old version of step at the beginning of any call to this new version of step
   setTimeout(this.step.bind(context), this.timeBetweenSteps);
