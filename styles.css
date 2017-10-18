@@ -3,13 +3,16 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("src/images/dance_floor1.png");
+  background-position: center;
+  height: 50%;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: white;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .lineUpDancersButton{
   padding:5px 12px;
   float:right;
 }
@@ -21,12 +24,21 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid yellow;
-  border-radius:10px;
+  /*border:10px solid yellow;
+  border-radius:10px;*/
   position:absolute;
 }
-.newClassColor{ 
-  border: 5px solid red;
-  border-radius: 10px;
+.newClassColor { 
+/*  border: 5px solid red;
+*/  
   position: absolute;
+  height: 100px;
+  width: 100px;
+}
+
+.lineUp {
+/*  align-items: center;
+*/  
+  top: 100;
+  left: 100;
 }

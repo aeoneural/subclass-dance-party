@@ -25,3 +25,11 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 }; 
 
+makeDancer.prototype.lineUp = function() {
+  var increment = 10;
+  this.top = 100; 
+  this.left = increment;
+  increment++;
+  // this.$node.css(styleSettings);
+};
+

@@ -27,16 +27,54 @@ $(document).ready(function() {
       $('body').width() * Math.random(),
       Math.random() * 1000
   );
+    
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
 
   $('#newBlinkyDancer').on('click', function(event) { 
-    // $('.dancer').addClass('newClassColor');
-    $('#micheal').prepend(<img src = 'mich.png' />);
+    $('.dancer').addClass('newClassColor');
+    
+    
+    // $('#micheal').prepend(<img src = 'mich.png' />);
 
     
     // $('body').append(dancer.$node);
   });
+  
+  $('#secondBlinkyDancer').on('click', function(event) { 
+    $('.dancer').addClass('newClassColor');
+    
+    
+    // $('#micheal').prepend(<img src = 'mich.png' />);
+    // console.log(window.dancers);
+    // $('body').append(dancer.$node);
+  });
+  
+  $('.lineUpDancersButton').on('click', function() {
+    for (var i = 0; i < window.dancers.length; i++) {
+      
+      window.dancers[i].top = 0;
+      window.dancers[i].left = 100;
+      console.log(window.dancers[i])
+      var movedDancer = [];
+      movedDancer.push(dancers[i]);
+      $('.dancer').remove();
+      // window.dancers.splice(i, 1);
+      // window.dancers.splice(i, 0, movedDancer);
+      
+      $('body').append(movedDancer[i].$node);
+      
+      window.dancers = movedDancer;
+    
+  
+      // lineUp.call(this, window.dancers[i])
+      // var bound = lineUp.bind(window.dancers[i].$node);
+      // bound();
+    }
+  });
+  
+  
  
 });
 
